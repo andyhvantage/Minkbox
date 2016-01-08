@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+              android:orientation="vertical"
+                tools:context="com.minkbox.Conversations">
+
+    <LinearLayout
+        android:id="@+id/container_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/conversation_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/blank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Conversations"
+            android:padding="100dp"
+            android:gravity="center"
+            android:textSize="25dp"
+            android:textStyle="italic"
+            android:typeface="serif"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/blank_page"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+
+</LinearLayout>

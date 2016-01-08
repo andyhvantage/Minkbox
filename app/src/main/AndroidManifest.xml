@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.minkbox" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="com.minkbox.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.minkbox.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".utils.Controller"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/MyMaterialTheme"
+        android:largeHeap="true">
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCO6HBfm-53HF7Yhm4dZTRW5jh84TncgOI" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.bugsnag.android.API_KEY"
+            android:value="46c8ed147618300d605d7a81224d7cba" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationName"
+            android:value="@string/app_name" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider458947780954673"
+            android:exported="true" />
+
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ProductDetail"
+            android:label="@string/title_activity_product_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TranslucentActionBar" />
+        <activity
+            android:name=".UserRegisterLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyMaterialTheme" />
+        <activity
+            android:name=".ChatActivity"
+            android:label="@string/title_activity_chat"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CellAProduct"
+            android:label="@string/title_activity_cell_aproduct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FilterActivity"
+            android:label="@string/title_activity_filter"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserProfile"
+            android:label="@string/title_activity_user_profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditProfile"
+            android:label="@string/title_activity_edit_profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LocationMap"
+            android:label="@string/title_activity_location_map"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".HelpActivity"
+            android:label="@string/title_activity_help"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".TermConditionActivity"
+            android:label="@string/title_activity_term_condition"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".PrivacyPolicyActivity"
+            android:label="@string/title_activity_privacy_policy"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SafetyActivity"
+            android:label="@string/title_activity_safety"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".RulesActivity"
+            android:label="@string/title_activity_rules"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".NotificationActivity"
+            android:label="@string/title_activity_notification"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".CollectionActivity"
+            android:label="@string/title_activity_collection"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ProductAllDetails"
+            android:label="@string/title_activity_product_all_details"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TranslucentActionBar" >
+        </activity>
+        <activity
+            android:name=".SoldApiActivity"
+            android:label="@string/title_activity_sold_api"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ReportThisProduct"
+            android:label="@string/title_activity_report_this_product"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ReportFeedback"
+            android:label="@string/title_activity_report_feedback"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".FacebookVerficationActivity"
+            android:label="@string/title_activity_facebook_verfication"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".PhoneVerificationActivity"
+            android:label="@string/title_activity_phone_verification"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".IdentiVerificationActivity"
+            android:label="@string/title_activity_identi_verification"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MobileNumVerificationActivity"
+            android:label="@string/title_activity_mobile_num_verification"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".VerifyEmailActivity"
+            android:label="@string/title_activity_verify_email"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MinkBoxNotification"
+            android:label="@string/title_activity_mink_box_notification"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ThankuEmailActivity"
+            android:label="@string/title_activity_thanku_email"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".UserNotification"
+            android:label="@string/title_activity_user_notification"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".GoogleplusVerificationActivity"
+            android:label="@string/title_activity_googleplus_verification"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".EmailVerificationActivity"
+            android:label="@string/title_activity_email_verification"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".LocationFielterActivity"
+            android:label="@string/title_activity_location_fielter"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MyPlaceEditProfileActivity"
+            android:label="@string/title_activity_my_place_edit_profile"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".FavouriteCategoryActivity"
+            android:label="@string/title_activity_favourite_category"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ThankuPhoneActivity"
+            android:label="@string/title_activity_thanku_phone"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".UpdateProduct"
+            android:label="@string/title_activity_update_product"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MyLocationmapUpdate"
+            android:label="@string/title_activity_my_locationmap_update"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ReportUser"
+            android:label="@string/title_activity_report_user"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".FullScreenProductImageSlider"
+            android:label="@string/title_activity_full_screen_product_image_slider"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MyProductLocationUpdate"
+            android:label="@string/title_activity_my_product_location_update"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".FAQActivity"
+            android:label="@string/title_activity_faq"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".Conversations"
+            android:label="@string/title_activity_conversations"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.minkbox" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".GCMIntentService" />
+
+        <activity
+            android:name=".FullUserImageActivity"
+            android:label="@string/title_activity_full_user_image"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service
+            android:name=".service.ProductNameList"
+            android:exported="false" >
+        </service>
+
+        <service
+            android:name=".service.ChatDataBaseService"
+            android:exported="false" >
+        </service>
+
+        <receiver
+            android:name=".service.ChatServices"
+            android:label="NetworkChangeReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".Twitter_Activity"
+            android:label="@string/title_activity_twitter_"
+            android:theme="@style/MyMaterialTheme" >
+        </activity>
+    </application>
+
+</manifest>

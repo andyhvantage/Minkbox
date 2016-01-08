@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pop_up_element"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/margin3"
+        android:layout_marginRight="@dimen/margin3"
+        android:background="@drawable/medium_box"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/margin2">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="This message will Auto destruct"
+            android:textColor="@color/wallet_secondary_text_holo_dark"
+            android:textSize="@dimen/small_text_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/margin2"
+            android:background="#000" />
+
+        <LinearLayout
+            android:id="@+id/child_eamil_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin2"
+                android:gravity="center_horizontal"
+                android:text="Your mission is to verify that your email:"
+                android:textColor="@color/wallet_hint_foreground_holo_light"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/text_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin1"
+                android:gravity="center_horizontal"
+                android:text="mmfinfotech305@gmail.com:"
+                android:textColor="@color/wallet_hint_foreground_holo_light"
+                android:textSize="@dimen/small_text_size" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin1"
+                android:gravity="center_horizontal"
+                android:text="is correct:"
+                android:textColor="@color/wallet_hint_foreground_holo_light"
+                android:textSize="@dimen/small_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/margin2"
+            android:background="#000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/change_email_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:text="Change email"
+                android:textColor="@color/wallet_hint_foreground_holo_light"
+                android:textSize="@dimen/small_text_size" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#000" />
+
+            <Button
+                android:id="@+id/correct_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:text="Yes,it's correct"
+                android:textColor="@color/wallet_hint_foreground_holo_light"
+                android:textSize="@dimen/small_text_size"
+
+                />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

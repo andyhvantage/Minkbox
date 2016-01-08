@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.minkbox.LocationMap">
+    <item
+        android:id="@+id/action_settings"
+        android:title="Right"
+        android:orderInCategory="1"
+        android:icon="@drawable/right"
+        app:showAsAction="always" />
+</menu>

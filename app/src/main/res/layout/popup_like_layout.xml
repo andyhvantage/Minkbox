@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/pop_up_like_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/edittext_background"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:layout_width="160px"
+                android:layout_height="wrap_content"
+                android:background="@drawable/facebook_popup_image" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin4"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/new_margin2"
+                android:gravity="center_horizontal"
+                android:text="@string/appname_on_fb_text"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/new_margin2"
+                android:gravity="center_horizontal"
+                android:textSize="18dp"
+                android:text="Keep up all the latest news and\nswankiest item in your area with\nour facebook Page"
+                 />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/new_margin2"
+                android:layout_marginRight="@dimen/new_margin2"
+                android:layout_marginTop="@dimen/margin4"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <com.inthecheesefactory.lib.fblike.widget.FBLikeView
+                    android:id="@+id/fbLikeView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/exit_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="Exit"/>
+
+    </LinearLayout>
+</RelativeLayout>

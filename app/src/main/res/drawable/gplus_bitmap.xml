@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape android:shape="oval">
+            <stroke android:width="0dp" android:color="@color/white" />
+            <solid android:color="@color/common_signin_btn_default_background" />
+        </shape>
+    </item>
+    <item>
+        <bitmap
+            android:src="@drawable/blackgplus"
+            android:gravity="center"/>
+    </item>
+</layer-list>

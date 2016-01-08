@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <!--<ImageView-->
+    <!--android:id="@+id/product_header_image"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="200dp"-->
+    <!--android:background="@drawable/product_image"-->
+    <!--android:scaleType="fitXY" />-->
+
+    <RelativeLayout
+        android:id="@+id/container_body"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_weight="1"
+        android:background="#FFF">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:saveEnabled="false" />
+
+        <com.minkbox.adapter.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20sp"
+            android:padding="5dp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/soldtext"
+        android:layout_width="@dimen/reserved_button_width"
+        android:layout_height="@dimen/reserved_button_height"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/sold_image"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/reservetext"
+        android:layout_width="@dimen/reserved_button_width"
+        android:layout_height="@dimen/reserved_button_height"
+        android:layout_below="@+id/soldtext"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/reserved"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

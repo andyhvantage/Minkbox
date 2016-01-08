@@ -1,0 +1,426 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.minkbox.Bugs_Activity">
+
+    <LinearLayout
+        android:id="@+id/container_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3">
+        <!--
+        veratical first layout
+        -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/bugs1_rel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/relative1"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/margin2"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/bugs1"
+                        android:layout_width="@dimen/reports_image_height_width"
+                        android:layout_height="@dimen/reports_image_height_width"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/wrongcategory_grey"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/bugs1_selected"
+                        android:layout_width="@dimen/reports_image_height_width"
+                        android:layout_height="@dimen/reports_image_height_width"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/wrongcategory"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/bugs1_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relative1"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:gravity="center_horizontal"
+                    android:text="Wrong Category" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bugs2_rel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/relative2"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/margin2"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/bugs2"
+                        android:layout_width="@dimen/reports_image_height_width"
+                        android:layout_height="@dimen/reports_image_height_width"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/people_grey" />
+
+                    <ImageView
+                        android:id="@+id/bugs2_selected"
+                        android:layout_width="@dimen/reports_image_height_width"
+                        android:layout_height="@dimen/reports_image_height_width"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/people"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/bugs2_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relative2"
+                    android:layout_marginTop="@dimen/margin2"
+                    android:gravity="center_horizontal"
+                    android:text="People or animals" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bugs3_rel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/relative3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin2"
+                    >
+
+                    <ImageView
+                        android:id="@+id/bugs3"
+                        android:layout_width="@dimen/reports_image_height_width"
+                        android:layout_height="@dimen/reports_image_height_width"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/joke_grey" />
+
+                    <ImageView
+                        android:id="@+id/bugs3_selected"
+                        android:layout_width="@dimen/reports_image_height_width"
+                        android:layout_height="@dimen/reports_image_height_width"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/joke"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/bugs3_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relative3"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:gravity="center_horizontal"
+                    android:text="Joke" />
+            </RelativeLayout>
+        </LinearLayout>
+        <!--
+        veratical first layout closed
+        -->
+
+        <!--
+         veratical second layout
+         -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/bugs4_rel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/relative4"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="@dimen/margin2"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/bugs4"
+                        android:layout_width="@dimen/reports_image_height_width"
+                        android:layout_height="@dimen/reports_image_height_width"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/fakeitem_grey" />
+
+                    <ImageView
+                        android:id="@+id/bugs4_selected"
+                        android:layout_width="@dimen/reports_image_height_width"
+                        android:layout_height="@dimen/reports_image_height_width"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/fakeitem"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/bugs4_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relative4"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:gravity="center_horizontal"
+                    android:text="Fake item" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bugs5_rel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/relative5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin2"
+                    >
+
+                    <ImageView
+                        android:id="@+id/bugs5"
+                        android:layout_width="@dimen/reports_image_height_width"
+                        android:layout_height="@dimen/reports_image_height_width"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/explicitcontent_grey" />
+
+                    <ImageView
+                        android:id="@+id/bugs5_selected"
+                        android:layout_width="@dimen/reports_image_height_width"
+                        android:layout_height="@dimen/reports_image_height_width"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/explicitcontent"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/bugs5_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relative5"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:gravity="center_horizontal"
+                    android:text="Explicit content" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bugs6_rel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/relative6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin2"
+                    >
+
+                    <ImageView
+                        android:id="@+id/bugs6"
+                        android:layout_width="@dimen/reports_image_height_width"
+                        android:layout_height="@dimen/reports_image_height_width"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/image_grey" />
+
+                    <ImageView
+                        android:id="@+id/bugs6_selected"
+                        android:layout_width="@dimen/reports_image_height_width"
+                        android:layout_height="@dimen/reports_image_height_width"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/image"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/bugs6_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relative6"
+                    android:layout_marginTop="@dimen/margin2"
+                    android:gravity="center_horizontal"
+                    android:text="Doesn't match with the image" />
+            </RelativeLayout>
+        </LinearLayout>
+        <!--
+        veratical second layout closed
+        -->
+
+
+        <!--
+         veratical third layout
+         -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/bugs7_rel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/relative7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin2"
+                    >
+
+                    <ImageView
+                        android:id="@+id/bugs7"
+                        android:layout_width="@dimen/reports_image_height_width"
+                        android:layout_height="@dimen/reports_image_height_width"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/food_grey" />
+
+                    <ImageView
+                        android:id="@+id/bugs7_selected"
+                        android:layout_width="@dimen/reports_image_height_width"
+                        android:layout_height="@dimen/reports_image_height_width"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/food"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/bugs7_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relative7"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:gravity="center_horizontal"
+                    android:text="Food" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bugs8_rel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/relative8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin2"
+                    >
+
+                    <ImageView
+                        android:id="@+id/bugs8"
+                        android:layout_width="@dimen/reports_image_height_width"
+                        android:layout_height="@dimen/reports_image_height_width"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/drugs_grey" />
+
+                    <ImageView
+                        android:id="@+id/bugs8_selected"
+                        android:layout_width="@dimen/reports_image_height_width"
+                        android:layout_height="@dimen/reports_image_height_width"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/drugs"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/bugs8_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relative8"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:gravity="center_horizontal"
+                    android:text="Drugs or medicines" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bugs9_rel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/relative9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin2"
+                    >
+
+                    <ImageView
+                        android:id="@+id/bugs9"
+                        android:layout_width="@dimen/reports_image_height_width"
+                        android:layout_height="@dimen/reports_image_height_width"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/others_grey" />
+
+                    <ImageView
+                        android:id="@+id/bugs9_selected"
+                        android:layout_width="@dimen/reports_image_height_width"
+                        android:layout_height="@dimen/reports_image_height_width"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/others"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/bugs9_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relative9"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:gravity="center_horizontal"
+                    android:text="Others" />
+            </RelativeLayout>
+        </LinearLayout>
+        <!--
+        veratical third layout closed
+        -->
+    </LinearLayout>
+</LinearLayout>

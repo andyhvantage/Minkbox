@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/margin1"
+    android:background="#E4E4E4">
+
+    <LinearLayout
+        android:id="@+id/container_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/serchlayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_image_height_width"
+        android:layout_below="@+id/container_toolbar"
+        android:background="@drawable/medium_box"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin3"
+        android:paddingRight="@dimen/margin3">
+
+        <ImageView
+            android:id="@+id/searchicon"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="@dimen/icon_size"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/search_green" />
+
+        <AutoCompleteTextView
+            android:id="@+id/searchedit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin2"
+            android:layout_toRightOf="@+id/searchicon"
+            android:background="#00000000"
+            android:hint="What are you looking for ?"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="#000"
+            android:textSize="@dimen/small_text_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@+id/searchedit"
+            android:layout_marginLeft="@dimen/margin6"
+            android:background="#6faf20" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/serchlayout"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:id="@+id/search_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin1"
+            android:layout_marginRight="@dimen/margin1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/serchplacelayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/product_detail_linear_size"
+                android:layout_marginTop="@dimen/margin1"
+                android:background="@drawable/small_box"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/margin3">
+
+                <ImageView
+                    android:id="@+id/mapicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/spot" />
+
+                <EditText
+                    android:id="@+id/searchplace_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:background="#00000000"
+                    android:hint="Where do you want to Search ?"
+                    android:textColor="#000"
+                    android:textSize="@dimen/small_text_size" />
+            </LinearLayout>
+            <!--
+            Category layout
+            -->
+            <LinearLayout
+                android:id="@+id/categoeylist_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/category_layout_height"
+                android:layout_marginTop="@dimen/margin1"
+                android:background="@drawable/big_box"
+                android:orientation="vertical"
+                android:padding="@dimen/margin3"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/categorytext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Categories"
+                    android:textSize="@dimen/small_text_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/wallet_hint_foreground_holo_light" />
+
+                <ListView
+                    android:id="@+id/categorylist"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></ListView>
+            </LinearLayout>
+            <!--
+            Distance layout
+            -->
+            <LinearLayout
+                android:id="@+id/distancelayout"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="@dimen/margin1"
+                android:background="@drawable/medium_box"
+                android:orientation="vertical"
+                android:padding="@dimen/margin3"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/distancetext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:text="Distance"
+                    android:textSize="@dimen/small_text_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:background="@color/wallet_hint_foreground_holo_light" />
+
+                <RadioGroup
+                    android:id="@+id/radios"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/container_toolbar"
+                    android:layout_gravity="right"
+                    android:inputType="text"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/nearby_radio_button"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="#fff"
+                        android:button="@null"
+                        android:drawablePadding="30dp"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:gravity="center_vertical"
+                        android:text="Nearby(1 kms)"
+                        android:textColor="#000"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <RadioButton
+                        android:id="@+id/area_radio_button"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:button="@null"
+                        android:drawablePadding="30dp"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:gravity="center_vertical"
+                        android:text="In my area(5 kms)"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <RadioButton
+                        android:id="@+id/city_radio_button"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:button="@null"
+                        android:drawablePadding="30dp"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:gravity="center_vertical"
+                        android:text="In my town or city(10 kms)"
+                        android:textColor="#000"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <RadioButton
+                        android:id="@+id/further_radio_button"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawablePadding="30dp"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:gravity="center_vertical"
+                        android:text="For(10+ kms)"
+                        android:textColor="#000"
+                        android:textSize="@dimen/small_text_size" />
+                </RadioGroup>
+
+            </LinearLayout>
+            <!--
+                        Distance layout closed
+            -->
+            <!--
+                        Listed layout
+            -->
+            <LinearLayout
+                android:id="@+id/listedlayout"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="@dimen/margin1"
+                android:background="@drawable/medium_box"
+                android:orientation="vertical"
+                android:padding="@dimen/margin3"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/Listedtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:text="Listed within"
+                    android:textSize="@dimen/small_text_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:background="@color/wallet_hint_foreground_holo_light" />
+
+                <RadioGroup
+                    android:id="@+id/radios1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/radios"
+                    android:layout_gravity="right"
+                    android:inputType="text"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/hour_radio_button"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="#fff"
+                        android:button="@null"
+                        android:drawablePadding="30dp"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:gravity="center_vertical"
+                        android:text="24 hours"
+                        android:textColor="#000"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <RadioButton
+                        android:id="@+id/seven_daysradio_button"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:button="@null"
+                        android:drawablePadding="30dp"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:gravity="center_vertical"
+                        android:text="7 days"
+                        android:textColor="#000"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <RadioButton
+                        android:id="@+id/thirty_day_radio_button"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:button="@null"
+                        android:drawablePadding="30dp"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:gravity="center_vertical"
+                        android:text="30 days"
+                        android:textColor="#000"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <RadioButton
+                        android:id="@+id/all_radio_buuton"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawablePadding="30dp"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:gravity="center_vertical"
+                        android:text="All Listings"
+                        android:textColor="#000"
+                        android:textSize="@dimen/small_text_size" />
+                </RadioGroup>
+            </LinearLayout>
+            <!--
+                       Listed layout closed
+           -->
+            <!--
+                      Price layout
+          -->
+
+
+            <LinearLayout
+                android:id="@+id/pricelayout"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="@dimen/margin1"
+                android:background="@drawable/medium_box"
+                android:orientation="vertical"
+                android:padding="@dimen/margin3"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/pricetext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:text="Price"
+                    android:textSize="@dimen/small_text_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:background="@color/wallet_hint_foreground_holo_light" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin3"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/from_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="From"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <EditText
+                        android:id="@+id/form_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_edittext"
+                        android:cursorVisible="true"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textColor="#000" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin3"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/to_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="to"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <EditText
+                        android:id="@+id/to_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_edittext"
+                        android:cursorVisible="true"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textColor="#000" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--
+                        price layout closed
+            -->
+
+            <!--
+                        Sortby layout
+            -->
+            <LinearLayout
+                android:id="@+id/sortlayout"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="@dimen/margin1"
+                android:background="@drawable/medium_box"
+                android:orientation="vertical"
+                android:padding="@dimen/margin3">
+
+                <TextView
+                    android:id="@+id/sorttext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sort by"
+                    android:textSize="@dimen/small_text_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/wallet_hint_foreground_holo_light" />
+
+                <RadioGroup
+                    android:id="@+id/radios2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/radios"
+                    android:layout_gravity="right"
+                    android:inputType="text"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/distance_radio_button"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:background="#fff"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawablePadding="30dp"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:gravity="center_vertical"
+                        android:text="Distance"
+                        android:textColor="#000"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <RadioButton
+                        android:id="@+id/high_radio_button"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:button="@null"
+                        android:drawablePadding="30dp"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:gravity="center_vertical"
+                        android:text="Price low to high"
+                        android:textColor="#000"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <RadioButton
+                        android:id="@+id/low_radio_button"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:button="@null"
+                        android:drawablePadding="30dp"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:gravity="center_vertical"
+                        android:text="Price high to low"
+                        android:textColor="#000"
+                        android:textSize="@dimen/small_text_size" />
+
+                    <RadioButton
+                        android:id="@+id/recently_radio_button"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:button="@null"
+                        android:drawablePadding="30dp"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:gravity="center_vertical"
+                        android:text="Most recently published"
+                        android:textColor="#000"
+                        android:textSize="@dimen/small_text_size" />
+                </RadioGroup>
+
+            </LinearLayout>
+            <!--
+                       Sortby layout closed
+           -->
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin2"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/text_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:weightSum="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/touch_effect_drawer"
+                android:layout_marginRight="5dp"
+                android:drawablePadding="5dp"
+                android:padding="10dp"
+                android:gravity="left"
+                android:textColor="#fff"
+                android:textSize="15dp"
+                android:text="aaa"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/iconimage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/text_ll"
+            android:gravity="center"
+            android:layout_weight="1.5"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_launcher"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

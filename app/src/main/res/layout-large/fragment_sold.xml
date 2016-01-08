@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <GridView
+        android:id="@+id/gridView_sold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+        android:background="#E4E4E4"
+        android:gravity="center"
+        android:numColumns="2"
+        android:stretchMode="columnWidth"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/blank"
+            android:layout_width="@dimen/no_roducts_width"
+            android:layout_height="@dimen/no_roducts_height"
+            android:text="No Products sold out"
+            android:gravity="center"
+            android:textSize="@dimen/large_text_size"
+            android:textStyle="italic"
+            android:typeface="serif"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/blank_page"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</LinearLayout>

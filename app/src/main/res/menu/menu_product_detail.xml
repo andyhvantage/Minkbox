@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.minkbox.ProductDetail">
+    <item
+        android:id="@+id/report_this_listing"
+        android:orderInCategory="100"
+        android:title="Report this listing"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/share"
+        android:orderInCategory="100"
+        android:title="Share"
+        app:showAsAction="never" />
+</menu>

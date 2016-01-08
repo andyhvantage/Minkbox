@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edittext_background"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/plusign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/abc_ic_clear_mtrl_alpha" />
+
+        <ImageView
+            android:id="@+id/minussign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/abc_ic_clear_mtrl_alpha" />
+
+        <TextView
+            android:id="@+id/categoeytext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/minussign"
+            android:text="Category"
+            android:textSize="@dimen/chat_text" />
+
+        <View
+            android:id="@+id/lineview"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/categoeytext"
+            android:layout_marginTop="20dp"
+            android:background="#000" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lineview"
+            android:layout_marginTop="20dp"
+            android:textSize="@dimen/chat_text_small"
+            android:text="Electricity" />
+
+        <CheckBox
+            android:id="@+id/searchicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/lineview"
+            android:layout_marginTop="10dp"
+            />
+    </RelativeLayout>
+</RelativeLayout>

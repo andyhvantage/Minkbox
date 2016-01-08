@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/pop_up_category_element"
+    android:layout_centerHorizontal="true"
+    tools:context=".DisplayFragment">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/edit_text_pressed">
+
+        <LinearLayout
+            android:id="@+id/fragment_display_dateformat_layout_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5">
+
+                <CheckBox
+                    android:id="@+id/check1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="All Categories"
+                    android:textSize="24dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/check1"
+                    android:layout_marginTop="5dp"
+                    android:background="#000" />
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/listView1"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                android:layout_weight="0.5" />
+
+            <TextView
+                android:id="@+id/textViewalert"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:visibility="gone"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:text="No Categories Available"
+                android:layout_weight="0.5" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/apply_category_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fragment_display_dateformat_layout_radiogroup"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="#2b9402"
+            android:text="Apply Category"
+            android:textColor="#FFF"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/cross"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/cross" />
+</RelativeLayout>

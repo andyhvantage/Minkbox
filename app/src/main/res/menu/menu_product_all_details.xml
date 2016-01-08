@@ -1,0 +1,46 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.minkbox.ProductAllDetails">
+    <item
+        android:id="@+id/action_edit"
+        android:title="@string/action_edit"
+        android:icon="@drawable/edit"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_like"
+        android:title="@string/action_rating"
+        android:visible="false"
+        android:icon="@drawable/star_icon"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_dislike"
+        android:title="@string/action_unrating"
+        android:visible="false"
+        android:icon="@drawable/yellowstar"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_Delete"
+        android:title="Delete Product"
+        android:visible="false"
+        android:orderInCategory="1"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_report"
+        android:visible="false"
+        android:title="Report this product"
+        android:orderInCategory="1"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_share"
+        android:title="Share"
+        android:visible="false"
+        android:orderInCategory="2"
+        app:showAsAction="never" />
+
+
+</menu>

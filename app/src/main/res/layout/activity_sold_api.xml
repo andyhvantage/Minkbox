@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="2"
+    tools:context="com.minkbox.ProductDetail">
+
+    <LinearLayout
+        android:id="@+id/container_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/cong_img"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_launcher"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Congratulation!"
+            android:id="@+id/cong_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="@dimen/normal_text_size"
+            android:layout_below="@+id/cong_img"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You sold"
+            android:id="@+id/you_sold_product_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="#000"
+            android:textSize="@dimen/normal_text_size"
+            android:layout_below="@+id/cong_text"/>
+
+    </RelativeLayout>
+</LinearLayout>

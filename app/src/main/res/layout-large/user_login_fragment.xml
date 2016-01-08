@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fb="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:paddingTop="10dp">
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/fbloginbtn1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_button_height"
+        android:layout_marginLeft="@dimen/margin2"
+        android:layout_marginRight="@dimen/margin2"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        fb:login_text=""
+        fb:logout_text="" />
+
+    <Button
+        android:id="@+id/logingmail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_buttons_height"
+        android:layout_below="@+id/fbloginbtn1"
+        android:layout_marginLeft="@dimen/margin2"
+        android:layout_marginRight="@dimen/margin2"
+        android:layout_marginTop="@dimen/margin2"
+        android:background="@drawable/logingmail" />
+
+    <Button
+        android:id="@+id/btn_sign_out"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_buttons_height"
+        android:layout_below="@+id/fbloginbtn1"
+        android:layout_marginLeft="@dimen/margin2"
+        android:layout_marginRight="@dimen/margin2"
+        android:layout_marginTop="@dimen/margin2"
+        android:background="@drawable/logingmail"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logingmail"
+        android:layout_margin="@dimen/margin4"
+        android:gravity="center_horizontal"
+        android:text="Don't worry we will never share anything without your permission"
+        android:textSize="@dimen/small_text_size" />
+
+    <EditText
+        android:id="@+id/name_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:layout_marginLeft="@dimen/margin2"
+        android:layout_marginRight="@dimen/margin2"
+        android:layout_marginTop="@dimen/margin2"
+        android:drawableLeft="@drawable/mail_box_icon"
+        android:hint="Email"
+        android:maxLines="1"
+        android:paddingLeft="5dp"
+        android:singleLine="true"
+        android:textColor="#000"
+        android:textSize="@dimen/small_text_size"
+        android:typeface="serif" />
+
+    <EditText
+        android:id="@+id/password_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_edit"
+        android:layout_marginLeft="@dimen/margin2"
+        android:layout_marginRight="@dimen/margin2"
+        android:layout_marginTop="@dimen/margin1"
+        android:drawableLeft="@drawable/pwd_box_icon"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="5dp"
+        android:textColor="#000"
+        android:textSize="@dimen/small_text_size"
+        android:typeface="serif" />
+
+    <Button
+        android:id="@+id/loginbtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_button_height"
+        android:layout_below="@+id/password_edit"
+        android:layout_marginLeft="@dimen/margin2"
+        android:layout_marginRight="@dimen/margin2"
+        android:layout_marginTop="@dimen/margin4"
+        android:background="@drawable/green_corner"
+        android:text="Log In"
+        android:textColor="#1F8600"
+        android:textSize="@dimen/small_text_size" />
+
+
+    <TextView
+        android:id="@+id/forgotpswdtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/loginbtn"
+        android:layout_marginRight="@dimen/margin2"
+        android:layout_marginTop="@dimen/margin2"
+        android:text="Forgot Password?"
+        android:textColor="#1F8600"
+        android:textSize="@dimen/small_text_size" />
+</RelativeLayout>

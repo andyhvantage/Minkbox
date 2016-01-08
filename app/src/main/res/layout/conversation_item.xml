@@ -1,0 +1,76 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context="com.minkbox.Conversations">
+
+
+
+    <RelativeLayout
+        android:id="@+id/conver_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ddd"
+        android:padding="10dp">
+
+        <com.minkbox.classes.RoundedImageView
+            android:id="@+id/user_profile_image"
+            android:layout_width="@dimen/profile_chat_image_width"
+            android:layout_height="@dimen/profile_chat_image_width"
+            android:src="@drawable/def_user_img"
+            android:scaleType="fitXY"
+            android:visibility="visible"/>
+
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_toRightOf="@+id/user_profile_image"
+            android:layout_marginLeft="5dp"
+            android:text="Name"
+            android:textAllCaps="true"
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/productname"
+            android:layout_below="@id/username"
+            android:textColor="#000"
+            android:layout_toRightOf="@+id/user_profile_image"
+            android:layout_marginLeft="5dp"
+            android:text="p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_toRightOf="@+id/user_profile_image"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@id/productname"
+            android:text="m"
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_alignParentRight="true"
+            android:text="dd"
+            android:textColor="#000"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/date"
+        android:src="@drawable/chat_detail"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

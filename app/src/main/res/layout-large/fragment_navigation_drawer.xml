@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#191919">
+
+    <LinearLayout
+        android:id="@+id/nav_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/drawer_layout_height"
+        android:layout_alignParentTop="true"
+        android:background="#191919"
+        android:gravity="center"
+        android:paddingLeft="@dimen/margin2"
+        android:paddingRight="@dimen/margin2"
+        android:paddingTop="@dimen/margin2"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin4"
+            android:layout_toRightOf="@+id/relative_profile_image"
+            android:layout_weight="0.6"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="Log in or Register"
+                android:textColor="#b2b2b2"
+                android:textSize="@dimen/normal_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/item_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_name"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="@string/at_appname_text"
+                android:textColor="#b2b2b2"
+                android:textSize="@dimen/small_text_size" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.4"
+            >
+
+            <com.minkbox.classes.RoundedImageView
+                android:id="@+id/user_profile_drawer"
+                android:layout_width="@dimen/profile_image_height_width"
+                android:layout_height="@dimen/profile_image_height_width"
+                android:layout_marginTop="@dimen/margin1"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:id="@+id/user_profile_drawer1"
+                android:layout_width="@dimen/profile_image_height_width"
+                android:layout_height="@dimen/profile_image_height_width"
+                android:layout_marginTop="@dimen/margin1"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dividerview"
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/nav_header_container"
+        android:layout_marginTop="15dp"
+        android:background="#ffffff" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/drawerList"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/dividerview"
+        android:background="#191919" />
+
+
+</RelativeLayout>

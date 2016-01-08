@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.minkbox.PhoneVerificationActivity">
+
+    <LinearLayout
+        android:id="@+id/container_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin2"
+        android:layout_below="@+id/container_toolbar"
+        android:layout_marginRight="@dimen/margin2"
+        android:layout_marginTop="@dimen/margin4"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/phone_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/phone" />
+
+        <TextView
+            android:id="@+id/number_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin4"
+            android:text="Phone Number"
+            android:textColor="#000"
+            android:textSize="@dimen/normal_text_size" />
+
+        <TextView
+            android:id="@+id/verifacation_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin3"
+            android:text="Please Verify your phone.We will send you atext messsage with a verification code"
+            android:textSize="@dimen/small_text_size" />
+
+        <LinearLayout
+            android:id="@+id/child_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin2"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/code_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.4"
+                android:gravity="center_horizontal"
+                android:editable="false"
+                android:text="+91"
+                android:textColor="#000" />
+
+            <EditText
+                android:id="@+id/number_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:hint="Phone Number"
+                android:inputType="number"
+                android:textColor="#000" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/send_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/margin3"
+            android:background="@drawable/oval_btn_background"
+            android:text="Send text message"
+            android:textSize="@dimen/small_text_size" />
+    </LinearLayout>
+
+
+</RelativeLayout>

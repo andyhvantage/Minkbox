@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4E4E4">
+
+    <LinearLayout
+        android:id="@+id/container_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/container_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/margin2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/firstlayoyut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin2"
+                android:layout_marginRight="@dimen/margin2"
+                android:layout_marginTop="@dimen/margin2"
+                android:padding="@dimen/margin1"
+                android:background="@drawable/medium_box"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/agrementtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:text="Legal agreements"
+                    android:padding="@dimen/margin1"
+                    android:textColor="@color/wallet_secondary_text_holo_dark" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:background="@color/wallet_hint_foreground_holo_light" />
+
+                <RelativeLayout
+                    android:id="@+id/termcnditnlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin1">
+
+                    <TextView
+                        android:id="@+id/term_condotion_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/margin1"
+                        android:text="Terms &amp; conditions"
+                        android:textColor="@color/wallet_hint_foreground_holo_light" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/privecypolicylayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin1">
+
+                    <TextView
+                        android:id="@+id/privecy_policy_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/margin1"
+                        android:text="Privacy policy"
+                        android:textColor="@color/wallet_hint_foreground_holo_light" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/safetylayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin1">
+
+                    <TextView
+                        android:id="@+id/safety_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/margin1"
+                        android:text="Safety Guidelines"
+                        android:textColor="@color/wallet_hint_foreground_holo_light" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ruleslayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin1">
+
+                    <TextView
+                        android:id="@+id/rule_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin1"
+                        android:text="@string/appname_rules_text"
+                        android:textColor="@color/wallet_hint_foreground_holo_light" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/secondtlayoyut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/firstlayoyut"
+                android:layout_marginLeft="@dimen/margin2"
+                android:layout_marginRight="@dimen/margin2"
+                android:padding="@dimen/margin1"
+                android:layout_marginTop="@dimen/margin2"
+                android:background="@drawable/medium_box"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/socialmediatext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:padding="@dimen/margin1"
+                    android:text="Social media"
+                    android:textColor="@color/wallet_secondary_text_holo_dark" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:background="@color/wallet_hint_foreground_holo_light" />
+
+                <RelativeLayout
+                    android:id="@+id/likefblayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin1">
+
+                    <TextView
+                        android:id="@+id/like_fb_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/margin1"
+                        android:text="Like us on Facebook"
+                        android:textColor="@color/wallet_hint_foreground_holo_light" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/minktwitterlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin1">
+
+                    <TextView
+                        android:id="@+id/twitter_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/margin1"
+                        android:text="@string/appname_on_twitter_text"
+                        android:textColor="@color/wallet_hint_foreground_holo_light" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/thirdlayoyut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/secondtlayoyut"
+                android:layout_marginLeft="@dimen/margin2"
+                android:layout_marginRight="@dimen/margin2"
+                android:layout_marginTop="@dimen/margin2"
+                android:padding="@dimen/margin1"
+                android:background="@drawable/medium_box"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/contacttext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:text="Contact us"
+                    android:padding="@dimen/margin1"
+                    android:textColor="@color/wallet_secondary_text_holo_dark" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:background="@color/wallet_hint_foreground_holo_light" />
+
+                <RelativeLayout
+                    android:id="@+id/faqlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin1">
+
+                    <TextView
+                        android:id="@+id/faq_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/margin1"
+                        android:text="FAQ"
+                        android:textColor="@color/wallet_hint_foreground_holo_light" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/versionlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin1">
+
+                    <TextView
+                        android:id="@+id/version_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/margin1"
+                        android:text="Software version"
+                        android:textColor="@color/wallet_hint_foreground_holo_light" />
+
+                    <TextView
+                        android:id="@+id/version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="@dimen/margin1"
+                        android:text="1.0.0"
+                        android:textColor="@color/wallet_hint_foreground_holo_light" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

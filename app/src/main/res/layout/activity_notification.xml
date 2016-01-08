@@ -1,0 +1,214 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4E4E4">
+
+    <LinearLayout
+        android:id="@+id/container_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/container_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin2"
+            android:orientation="vertical">
+            <!--
+            Phone notification layout
+            -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin2"
+                android:layout_marginRight="@dimen/margin2"
+                android:background="@drawable/small_box"
+                android:orientation="vertical"
+                android:padding="@dimen/margin2">
+
+                <TextView
+                    android:id="@+id/phonetext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:padding="@dimen/margin1"
+                    android:text="Phone" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:background="#000" />
+
+                <TextView
+                    android:id="@+id/usernotificationtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin3"
+                    android:text="User chat notification"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/minkboxnotificationtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin3"
+                    android:text="MinkBox notification"
+                    android:textColor="#000" />
+            </LinearLayout>
+            <!--
+           Phone notification layout closed
+           -->
+            <!--
+                      Email notification layout closed
+                      -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin2"
+                android:layout_marginRight="@dimen/margin2"
+                android:layout_marginTop="@dimen/margin2"
+                android:background="@drawable/medium_box"
+                android:orientation="vertical"
+                android:padding="@dimen/margin2">
+
+                <TextView
+                    android:id="@+id/emailtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:padding="@dimen/margin1"
+                    android:text="Email" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/margin1"
+                    android:background="@color/wallet_hint_foreground_holo_light" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/chat_msg_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Chat message"
+                        android:textColor="#000" />
+
+                    <CheckBox
+                        android:id="@+id/chat_msg_box"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:checked="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/newselleter_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Newsletter"
+                        android:textColor="#000" />
+
+                    <CheckBox
+                        android:id="@+id/newselleter_box"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:checked="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tipstrick_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Tips and Tricks"
+                        android:textColor="#000" />
+
+                    <CheckBox
+                        android:id="@+id/tipstrick_box"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+
+                        android:checked="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/newcollection_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="New collection"
+                        android:textColor="#000" />
+
+                    <CheckBox
+                        android:id="@+id/newcollection_box"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+
+                        android:checked="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/contest_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Contests and Promotion"
+                        android:textColor="#000" />
+
+                    <CheckBox
+                        android:id="@+id/contest_box"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:checked="true" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

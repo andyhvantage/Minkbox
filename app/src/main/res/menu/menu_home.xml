@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.minkbox.HomeFragment">
+    <!--<item-->
+        <!--android:id="@+id/action_category"-->
+        <!--android:orderInCategory="1"-->
+        <!--android:title="Category"-->
+        <!--android:icon="@drawable/category"-->
+        <!--app:showAsAction="always" />-->
+
+<item
+        android:id="@+id/action_fielter"
+        android:orderInCategory="8"
+        android:title="Filters"
+        android:icon="@drawable/search"
+         app:showAsAction="always" />
+    </menu>

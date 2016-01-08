@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E4E4E4"
+    tools:context="com.minkbox.HomeFragment">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cat_header1"
+        >
+        <GridView
+            android:id="@+id/gridView_images"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E4E4E4"
+            android:gravity="center"
+            android:scrollbars="none"
+            android:numColumns="2"
+            android:paddingBottom="@dimen/margin2"
+            android:stretchMode="columnWidth" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/miles_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/gradient"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:padding="@dimen/margin1"
+        android:weightSum="2">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.8">
+
+            <ImageView
+                android:layout_width="@dimen/product_detail_image_size"
+                android:layout_height="@dimen/product_detail_image_size"
+                android:id="@+id/close"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:background="@drawable/cancel_btn"
+
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/miles_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin1"
+            android:layout_weight="0.2"
+            android:text="@string/miles_text"
+            android:textColor="#737373"
+            android:textSize="@dimen/small_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cat_header1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/miles_header">
+
+
+        <ImageView
+            android:layout_width="@dimen/product_detail_image_size"
+            android:layout_height="@dimen/product_detail_image_size"
+            android:id="@+id/close_cat"
+            android:layout_gravity="center"
+            android:background="@drawable/cancel_btn"
+            android:visibility="gone"
+            />
+
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/cat_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:padding="@dimen/margin1"
+                android:weightSum="2">
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/add_product"
+        android:layout_width="@dimen/add_product_home_screen_button_size"
+        android:layout_height="@dimen/add_product_home_screen_button_size"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/floatingcamera_selector"
+        />
+</RelativeLayout>
